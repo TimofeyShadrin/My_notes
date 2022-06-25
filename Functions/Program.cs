@@ -15,15 +15,15 @@
 void PrintArray(int[] col) // выводим массив в консоль в виде [1, 2, 3, 4, 5, 6, 7, 8, 9]
 {
     int count = col.Length;
-    int position = 0;
+    int position = 1;
     
     Console.Write($"[{col[0]},");
 
-    while (position + 1 < count - 1)
+    while (position < count - 1)
     {
         Console.Write($" {col[position]},");
         position++;
     }
 
-    Console.WriteLine($" {col[position]}]");
+    Console.WriteLine($" {col[count] - 1}]");
 }

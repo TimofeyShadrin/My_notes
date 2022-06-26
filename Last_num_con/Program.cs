@@ -91,9 +91,11 @@ void PrintArrayInt(int[] col) // метод для вывода массива �
     }
 
 Console.Clear();
-Console.Write($"Ведите пожалуйста целое трехначное число: ");
-string input = Console.ReadLine();
+Console.Write($"Ведите пожалуйста целое трехзначное число: ");
+string? input = Console.ReadLine();
 
+if (input != "")
+{
 char[] collection = values(input);
 Console.WriteLine();
 Console.WriteLine("Вы ввели следующие символы, проверьте!");
@@ -109,3 +111,10 @@ Console.WriteLine("мы все равно определим последнюю 
 Console.WriteLine();
 Console.WriteLine($" Это: {numbers[numbers.Length - 2]}");
 Console.WriteLine();
+}
+else
+{
+    Console.WriteLine();
+    Console.WriteLine("Вы ничего не ввели!");
+    Console.WriteLine();
+}

@@ -81,27 +81,31 @@ void PrintArrayInt(int[] col) // метод для вывода массива �
     
     Console.Write($"[{col[0]},");
 
-    while (position < count - 1)
+    while (position < count - 2)
     {
         Console.Write($" {col[position]},");
         position++;
     }
 
-    Console.WriteLine($" {col[count - 1]}]");
+    Console.WriteLine($" {col[count - 2]}]");
     }
 
-int attempts = 0;
-string? input = Console.ReadLine();
+Console.Clear();
+Console.Write($"Ведите пожалуйста целое трехначное число: ");
+string input = Console.ReadLine();
+
 char[] collection = values(input);
+Console.WriteLine();
+Console.WriteLine("Вы ввели следующие символы, проверьте!");
 PrintArrayChar(collection);
-Console.WriteLine(collection.Length);
+Console.WriteLine();
+Console.WriteLine("Ничего страшного, если Вы ошиблись!");
+Console.WriteLine("Мы сами выберем цифры из введеного Вами!");
 int[] numbers = data(input);
 PrintArrayInt(numbers);
-
-
-
-// while (attempts < 3)
-// {
-//     values(input);
-//     attempts++;
-// }
+Console.WriteLine();
+Console.WriteLine("И не смотря на то, что количество может отличаться от заданного,");
+Console.WriteLine("мы все равно определим последнюю цифру. Вот она!");
+Console.WriteLine();
+Console.WriteLine($" Это: {numbers[numbers.Length - 2]}");
+Console.WriteLine();

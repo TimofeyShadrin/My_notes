@@ -6,7 +6,7 @@
     while (index < length)
     {
         //collection[index] = new Random().Next(1, 10);
-        collection[index] = Convert.ToInt32(Console.ReadLine());
+        collection[index] = Convert.ToInt32(Console.ReadLine().ToString());
         index++;
     }
 
